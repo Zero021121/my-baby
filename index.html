@@ -5,10 +5,198 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   
-  <title>For My Babyy</title>
+  <title>Learning</title>
 </head>
 <body>
-  <script src="path/to/anime.iife.min.js"></script>
+  <!-- <script src="path/to/anime.iife.min.js"></script> -->
   <script src="index.js"></script>
+<!-- <div class="app">
+  you still mad??🥺
+</div> -->
+<style>
+  body {
+    background: linear-gradient(to right, #070707, #606365);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    overflow: hidden;
+  }
+
+  #question {
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: white;
+    border: #000000;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  #trueBtn {
+    background: #000000;
+    color: white;
+  }
+
+  #movingBtn {
+    background: #000000;
+    color: white;
+    position: absolute;
+  }
+
+  .btn-container {
+    position: relative;
+    width: 300px;
+    height: 150px;
+  }
+
+  .explosion {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgb(255, 51, 0);
+    pointer-events: none;
+    animation: explode 0.6s ease-out forwards;
+  }
+
+  @keyframes explode {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(15);
+      opacity: 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div id="question">Are you still mad??🥺</div>
+
+<div class="btn-container">
+  <button id="trueBtn" class="btn">NO 😄</button>
+  <button id="movingBtn" class="btn">YES!! 😠</button>
+</div>
+
+<script>
+  const movingBtn = document.getElementById('movingBtn');
+  const trueBtn = document.getElementById('trueBtn');
+  const container = document.querySelector('.btn-container');
+
+  movingBtn.addEventListener('click', () => {
+    const maxX = container.clientWidth - movingBtn.offsetWidth;
+    const maxY = container.clientHeight - movingBtn.offsetHeight;
+    const x = Math.random() * maxX;
+    const y = Math.random() * maxY;
+    movingBtn.style.left = x + 'px';
+    movingBtn.style.top = y + 'px';
+  });
+
+  trueBtn.addEventListener('click', (e) => {
+    const boom = document.createElement('div');
+    boom.className = 'explosion';
+    boom.style.left = e.clientX + 'px';
+    boom.style.top = e.clientY + 'px';
+    document.body.appendChild(boom);
+
+    setTimeout(() => boom.remove(), 600);
+
+    setTimeout(() => {
+      alert("YAYYYYYY!!!");
+    }, 200);
+  });
+</script>
+
+
+<!-- <style>
+    body {
+      background: linear-gradient(white, gray, rgb(67, 67, 67), black );
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
+    }
+
+    #question {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    #trueBtn {
+      background: #ffffff;
+      color: rgb(0, 0, 0);
+    }
+
+    #movingBtn {
+      background: #ffffff;
+      color: rgb(0, 0, 0);
+      position: absolute;
+    }
+
+    .btn-container {
+      position: relative;
+      width: 300px;
+      height: 150px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="question">are you still angry??🥺🥺</div>
+
+  <div class="btn-container">
+    <button id="trueBtn" class="btn">nope😋</button>
+    <button id="movingBtn" class="btn">YES!!</button>
+  </div>
+
+  <script>
+    const movingBtn = document.getElementById('movingBtn');
+    const trueBtn = document.getElementById('trueBtn');
+    const container = document.querySelector('.btn-container');
+
+    movingBtn.addEventListener('click', () => {
+      const maxX = container.clientWidth - movingBtn.offsetWidth;
+      const maxY = container.clientHeight - movingBtn.offsetHeight;
+      const x = Math.random() * maxX;
+      const y = Math.random() * maxY;
+      movingBtn.style.left = x + 'px';
+      movingBtn.style.top = y + 'px';
+    });
+
+    trueBtn.addEventListener('click', () => {
+      alert('YAYYY!!😋😋')
+      ;
+      alert('TEXT ME BACK BABYY!!')
+    });
+  </script> -->
+
+</body>
+<head>
 </body>
 </html>
